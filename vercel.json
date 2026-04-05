@@ -1,11 +1,33 @@
 {
   "cleanUrls": true,
   "rewrites": [
-    { "source": "/login", "destination": "/login.html" },
-    { "source": "/cadastro", "destination": "/cadastro.html" },
-    { "source": "/triagem", "destination": "/triagem.html" },
-    { "source": "/senha/(.*)", "destination": "/index.html" },
-    { "source": "/admin", "destination": "/index.html" },
-    { "source": "/(.*)", "destination": "/index.html" }
+    {
+      "source": "/api/me",
+      "destination": "/api/me"
+    },
+    {
+      "source": "/login",
+      "destination": "/login.html"
+    },
+    {
+      "source": "/triagem",
+      "destination": "/triagem.html"
+    },
+    {
+      "source": "/cadastro",
+      "destination": "/cadastro.html"
+    },
+    {
+      "source": "/admin",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/senha/(.*)",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
   ]
 }
