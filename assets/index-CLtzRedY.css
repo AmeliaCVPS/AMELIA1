@@ -1,1 +1,154 @@
+@layer properties {
+    @supports (((-webkit-hyphens: none)) and (not (margin-trim:inline))) or ((-moz-orient:inline) and (not (color:rgb(from red r g b)))) {
+        *, :before, :after, ::backdrop {
+            --tw-translate-x:0;
+            --tw-translate-y: 0;
+            --tw-translate-z: 0;
+            --tw-rotate-x: initial;
+            --tw-rotate-y: initial;
+            --tw-rotate-z: initial;
+            --tw-skew-x: initial;
+            --tw-skew-y: initial;
+            --tw-space-y-reverse: 0;
+            --tw-space-x-reverse: 0;
+            --tw-border-style: solid;
+            --tw-gradient-position: initial;
+            --tw-gradient-from: #0000;
+            --tw-gradient-via: #0000;
+            --tw-gradient-to: #0000;
+            --tw-gradient-stops: initial;
+            --tw-gradient-via-stops: initial;
+            --tw-gradient-from-position: 0%;
+            --tw-gradient-via-position: 50%;
+            --tw-gradient-to-position: 100%;
+            --tw-leading: initial;
+            --tw-font-weight: initial;
+            --tw-tracking: initial;
+            --tw-ordinal: initial;
+            --tw-slashed-zero: initial;
+            --tw-numeric-figure: initial;
+            --tw-numeric-spacing: initial;
+            --tw-numeric-fraction: initial;
+            --tw-shadow: 0 0 #0000;
+            --tw-shadow-color: initial;
+            --tw-shadow-alpha: 100%;
+            --tw-inset-shadow: 0 0 #0000;
+            --tw-inset-shadow-color: initial;
+            --tw-inset-shadow-alpha: 100%;
+            --tw-ring-color: initial;
+            --tw-ring-shadow: 0 0 #0000;
+            --tw-inset-ring-color: initial;
+            --tw-inset-ring-shadow: 0 0 #0000;
+            --tw-ring-inset: initial;
+            --tw-ring-offset-width: 0px;
+            --tw-ring-offset-color: #fff;
+            --tw-ring-offset-shadow: 0 0 #0000;
+            --tw-outline-style: solid;
+            --tw-blur: initial;
+            --tw-brightness: initial;
+            --tw-contrast: initial;
+            --tw-grayscale: initial;
+            --tw-hue-rotate: initial;
+            --tw-invert: initial;
+            --tw-opacity: initial;
+            --tw-saturate: initial;
+            --tw-sepia: initial;
+            --tw-drop-shadow: initial;
+            --tw-drop-shadow-color: initial;
+            --tw-drop-shadow-alpha: 100%;
+            --tw-drop-shadow-size: initial;
+            --tw-backdrop-blur: initial;
+            --tw-backdrop-brightness: initial;
+            --tw-backdrop-contrast: initial;
+            --tw-backdrop-grayscale: initial;
+            --tw-backdrop-hue-rotate: initial;
+            --tw-backdrop-invert: initial;
+            --tw-backdrop-opacity: initial;
+            --tw-backdrop-saturate: initial;
+            --tw-backdrop-sepia: initial;
+            --tw-duration: initial;
+            --tw-ease: initial;
+            --tw-content: "";
+            --tw-animation-delay: 0s;
+            --tw-animation-direction: normal;
+            --tw-animation-duration: initial;
+            --tw-animation-fill-mode: none;
+            --tw-animation-iteration-count: 1;
+            --tw-enter-blur: 0;
+            --tw-enter-opacity: 1;
+            --tw-enter-rotate: 0;
+            --tw-enter-scale: 1;
+            --tw-enter-translate-x: 0;
+            --tw-enter-translate-y: 0;
+            --tw-exit-blur: 0;
+            --tw-exit-opacity: 1;
+            --tw-exit-rotate: 0;
+            --tw-exit-scale: 1;
+            --tw-exit-translate-x: 0;
+            --tw-exit-translate-y: 0
+        }
+    }
+}
 
+@layer theme {
+    :root,
+    :host {
+        /* Definição de Cores OKLCH */
+        --color-red-50: oklch(97.1% .013 17.38);
+        --color-red-500: oklch(63.7% .237 25.331);
+        --color-blue-500: oklch(62.3% .214 259.815);
+        --color-blue-900: oklch(37.9% .146 265.522);
+        --color-black: #000;
+        --color-white: #fff;
+        
+        /* Tipografia e Espaçamento */
+        --spacing: .25rem;
+        --text-base: 1rem;
+        --text-base--line-height: 1.5;
+        --font-weight-normal: 400;
+        --font-weight-bold: 700;
+        --radius-2xl: 1rem;
+        
+        /* Animações */
+        --animate-spin: spin 1s linear infinite;
+        --animate-pulse: pulse 2s cubic-bezier(.4, 0, .6, 1) infinite;
+        
+        --default-font-family: var(--app-font-sans);
+        --color-border: hsl(var(--border))
+    }
+}
+
+@layer base {
+    *, :after, :before, ::backdrop {
+        box-sizing: border-box;
+        border: 0 solid;
+        margin: 0;
+        padding: 0
+    }
+    
+    body {
+        font-family: var(--app-font-sans);
+        color: hsl(var(--foreground));
+        -webkit-font-smoothing: antialiased;
+        /* Fundo em gradiente característico do projeto */
+        background: linear-gradient(135deg, #0f2447, #2e4a7a);
+        min-height: 100dvh;
+        overflow-x: hidden
+    }
+    
+    img, svg, video {
+        display: block;
+        max-width: 100%;
+        height: auto
+    }
+}
+
+@layer utilities {
+    .absolute { position: absolute }
+    .relative { position: relative }
+    .fixed { position: fixed }
+    .z-50 { z-index: 50 }
+    .m-0 { margin: 0 }
+    .mx-auto { margin-inline: auto }
+    /* ... outros utilitários de posicionamento e espaçamento */
+}
